@@ -374,6 +374,14 @@ a:hover {
     border-left-color: var(--kleur-paars);
 }
 
+.hulpvragen-toelichting {
+    margin-top: 32px;
+    color: var(--kleur-tekst-licht);
+    font-size: 0.95rem;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
 /* ===== WERKWIJZE ===== */
 .werkwijze-grid {
     display: grid;

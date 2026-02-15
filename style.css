@@ -401,6 +401,11 @@ a:hover {
     font-size: 0.95rem;
 }
 
+.werkwijze-extra {
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
 .werkwijze-voordelen {
     background: var(--kleur-wit);
     padding: 32px;

@@ -1,0 +1,567 @@
+/* ===== BASIS & VARIABELEN ===== */
+:root {
+    --kleur-primair: #2EBFA5;
+    --kleur-primair-donker: #259e89;
+    --kleur-paars: #4E4187;
+    --kleur-paars-licht: #5f52a0;
+    --kleur-licht: #F8FFE5;
+    --kleur-licht-warm: #f2f9da;
+    --kleur-tekst: #3a3a3a;
+    --kleur-tekst-licht: #5a5a5a;
+    --kleur-wit: #ffffff;
+    --schaduw: 0 2px 16px rgba(78, 65, 135, 0.08);
+    --schaduw-hover: 0 4px 24px rgba(78, 65, 135, 0.14);
+    --radius: 12px;
+    --overgang: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Josefin Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--kleur-tekst);
+    line-height: 1.7;
+    background-color: var(--kleur-wit);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: var(--kleur-paars);
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: var(--kleur-paars);
+}
+
+a {
+    color: var(--kleur-primair-donker);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== NAVIGATIE ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: var(--overgang);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: var(--kleur-wit);
+    box-shadow: var(--schaduw);
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--kleur-paars);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--kleur-tekst);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--overgang);
+}
+
+.nav-links a:hover {
+    color: var(--kleur-primair);
+    text-decoration: none;
+}
+
+.btn-nav {
+    background: var(--kleur-primair);
+    color: var(--kleur-wit) !important;
+    padding: 8px 20px;
+    border-radius: 24px;
+    transition: var(--overgang);
+}
+
+.btn-nav:hover {
+    background: var(--kleur-primair-donker);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--kleur-tekst);
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(135deg, var(--kleur-licht) 0%, var(--kleur-licht-warm) 50%, #e8f5f1 100%);
+    padding: 160px 0 100px;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--kleur-primair);
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--kleur-paars);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--kleur-primair);
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    color: var(--kleur-tekst-licht);
+    max-width: 650px;
+    margin: 0 auto 32px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--kleur-primair);
+    color: var(--kleur-wit);
+    padding: 14px 36px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--overgang);
+    box-shadow: 0 4px 12px rgba(46, 191, 165, 0.3);
+}
+
+.btn:hover {
+    background: var(--kleur-primair-donker);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 191, 165, 0.4);
+    text-decoration: none;
+}
+
+/* ===== KERNWAARDEN ===== */
+.kernwaarden {
+    padding: 60px 0;
+    background: var(--kleur-wit);
+}
+
+.waarden-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.waarde-card {
+    text-align: center;
+    padding: 32px 24px;
+    border-radius: var(--radius);
+    transition: var(--overgang);
+}
+
+.waarde-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--schaduw);
+}
+
+.waarde-icon-cirkel {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--kleur-primair), var(--kleur-paars));
+    margin: 0 auto 16px;
+    opacity: 0.8;
+}
+
+.waarde-card p {
+    color: var(--kleur-tekst-licht);
+    font-size: 0.95rem;
+}
+
+/* ===== SECTIES ===== */
+.sectie {
+    padding: 80px 0;
+}
+
+.sectie-licht {
+    background: var(--kleur-licht);
+}
+
+.sectie-accent {
+    background: linear-gradient(135deg, var(--kleur-paars) 0%, var(--kleur-paars-licht) 100%);
+    color: var(--kleur-wit);
+}
+
+.sectie-accent h2 {
+    color: var(--kleur-wit);
+}
+
+.sectie-intro {
+    font-size: 1.1rem;
+    color: var(--kleur-tekst-licht);
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.sectie-accent .sectie-intro {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===== TWEE KOLOMMEN ===== */
+.twee-kolommen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.kolom-tekst p {
+    margin-bottom: 16px;
+    color: var(--kleur-tekst-licht);
+}
+
+.kolom-tekst-licht p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.kolom-tekst-licht ul {
+    list-style: none;
+    margin: 16px 0;
+}
+
+.kolom-tekst-licht ul li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+}
+
+.kolom-tekst-licht ul li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--kleur-primair);
+    font-weight: 700;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.foto-placeholder {
+    background: rgba(78, 65, 135, 0.06);
+    border-radius: var(--radius);
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--kleur-tekst-licht);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.foto-placeholder-licht {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== HULPVRAGEN ===== */
+.hulpvragen-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.hulpvraag-item {
+    background: var(--kleur-licht);
+    padding: 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    font-weight: 500;
+    transition: var(--overgang);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 3px solid var(--kleur-primair);
+}
+
+.hulpvraag-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--schaduw);
+    border-left-color: var(--kleur-paars);
+}
+
+/* ===== WERKWIJZE ===== */
+.werkwijze-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.werkwijze-card {
+    background: var(--kleur-wit);
+    padding: 32px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--schaduw);
+    transition: var(--overgang);
+    border-top: 3px solid var(--kleur-primair);
+}
+
+.werkwijze-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--schaduw-hover);
+}
+
+.werkwijze-card p {
+    color: var(--kleur-tekst-licht);
+    font-size: 0.95rem;
+}
+
+.werkwijze-voordelen {
+    background: var(--kleur-wit);
+    padding: 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--schaduw);
+}
+
+.werkwijze-voordelen h3 {
+    margin-bottom: 16px;
+}
+
+.werkwijze-voordelen ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.werkwijze-voordelen ul li {
+    padding-left: 24px;
+    position: relative;
+    color: var(--kleur-tekst-licht);
+}
+
+.werkwijze-voordelen ul li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--kleur-primair);
+    font-weight: 700;
+}
+
+/* ===== VOOR SCHOLEN ===== */
+.school-voordelen {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.school-voordeel {
+    background: var(--kleur-licht);
+    padding: 24px;
+    border-radius: var(--radius);
+    transition: var(--overgang);
+}
+
+.school-voordeel:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--schaduw);
+}
+
+.school-voordeel strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--kleur-paars);
+}
+
+.school-voordeel p {
+    color: var(--kleur-tekst-licht);
+    font-size: 0.9rem;
+}
+
+/* ===== CONTACT ===== */
+.contact-sectie {
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 32px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+}
+
+.contact-item a {
+    font-weight: 600;
+    color: var(--kleur-paars);
+}
+
+.contact-item a:hover {
+    color: var(--kleur-primair);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--kleur-paars);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--kleur-primair);
+    margin-bottom: 4px;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .waarden-grid,
+    .werkwijze-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hulpvragen-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .school-voordelen {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .twee-kolommen {
+        grid-template-columns: 1fr;
+    }
+
+    .werkwijze-voordelen ul {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero {
+        padding: 130px 0 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--kleur-wit);
+        padding: 20px 24px;
+        box-shadow: var(--schaduw);
+        gap: 16px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hulpvragen-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .school-voordelen {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .sectie {
+        padding: 50px 0;
+    }
+}

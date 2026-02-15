@@ -454,6 +454,42 @@ a:hover {
     font-size: 0.9rem;
 }
 
+/* ===== REFERENTIES ===== */
+.referenties-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.referentie {
+    background: var(--kleur-wit);
+    padding: 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--schaduw);
+    border-left: 3px solid var(--kleur-primair);
+    transition: var(--overgang);
+}
+
+.referentie:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--schaduw-hover);
+}
+
+.referentie p {
+    color: var(--kleur-tekst-licht);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.referentie cite {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--kleur-paars);
+}
+
 /* ===== CONTACT ===== */
 .contact-sectie {
     text-align: center;
@@ -518,7 +554,8 @@ a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .school-voordelen {
+    .school-voordelen,
+    .referenties-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -569,7 +606,8 @@ a:hover {
         grid-template-columns: 1fr 1fr;
     }
 
-    .school-voordelen {
+    .school-voordelen,
+    .referenties-grid {
         grid-template-columns: 1fr;
     }
 

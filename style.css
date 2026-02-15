@@ -254,6 +254,15 @@ a:hover {
     color: var(--kleur-wit);
 }
 
+.sectie-ondertitel {
+    font-size: 1.15rem;
+    color: var(--kleur-primair);
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .sectie-intro {
     font-size: 1.1rem;
     color: var(--kleur-tekst-licht);
@@ -487,6 +496,36 @@ a:hover {
     margin-top: 40px;
 }
 
+/* ===== FOTO GRID ===== */
+.foto-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.foto-grid .sectie-foto {
+    height: 280px;
+}
+
+.foto-grid .foto-klein {
+    height: 220px;
+}
+
+/* ===== TARIEVEN ===== */
+.tarieven-tekst {
+    max-width: 700px;
+}
+
+.tarieven-tekst p {
+    color: var(--kleur-tekst-licht);
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.tarieven-tekst strong {
+    color: var(--kleur-paars);
+}
+
 /* ===== CONTACT ===== */
 .contact-sectie {
     text-align: center;
@@ -562,6 +601,17 @@ a:hover {
 
     .werkwijze-voordelen ul {
         grid-template-columns: 1fr;
+    }
+
+    .foto-grid {
+        flex-direction: row;
+    }
+
+    .foto-grid .sectie-foto,
+    .foto-grid .foto-klein {
+        height: 250px;
+        flex: 1;
+        min-width: 0;
     }
 
     .hero h1 {

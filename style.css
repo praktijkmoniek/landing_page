@@ -163,6 +163,14 @@ a:hover {
     color: var(--kleur-primair);
 }
 
+.zonnetje {
+    width: 0.8em;
+    height: 0.8em;
+    vertical-align: baseline;
+    margin-left: 4px;
+    color: var(--kleur-paars);
+}
+
 .hero-text {
     font-size: 1.15rem;
     color: var(--kleur-tekst-licht);

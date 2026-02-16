@@ -349,7 +349,7 @@ a:hover {
 }
 
 .skj-badge {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 12px;
     margin-top: 16px;
@@ -357,6 +357,10 @@ a:hover {
     background: var(--kleur-wit);
     border-radius: var(--radius);
     box-shadow: var(--schaduw);
+}
+
+.skj-badge-hero {
+    margin-top: 24px;
 }
 
 .skj-logo {

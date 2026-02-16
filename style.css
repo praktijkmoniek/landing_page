@@ -359,8 +359,14 @@ a:hover {
     box-shadow: var(--schaduw);
 }
 
-.skj-badge-hero {
-    margin-top: 24px;
+.skj-badge-footer {
+    margin: 16px auto;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+
+.skj-badge-footer span {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .skj-logo {

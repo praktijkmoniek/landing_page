@@ -446,6 +446,14 @@ a:hover {
     font-size: 0.9rem;
 }
 
+.werkwijze-toelichting {
+    margin-top: 32px;
+    color: var(--kleur-tekst-licht);
+    font-size: 0.95rem;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
 .werkwijze-voordelen {
     background: var(--kleur-wit);
     padding: 32px;

@@ -366,7 +366,7 @@ a:hover {
 }
 
 .skj-badge-footer span {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--kleur-wit);
 }
 
 .skj-logo {

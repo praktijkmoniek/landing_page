@@ -365,10 +365,6 @@ a:hover {
     box-shadow: none;
 }
 
-.skj-badge-footer span {
-    color: var(--kleur-wit);
-}
-
 .skj-logo {
     height: 40px;
     width: auto;
@@ -378,6 +374,10 @@ a:hover {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--kleur-paars);
+}
+
+.skj-badge-footer span {
+    color: var(--kleur-wit);
 }
 
 /* ===== HULPVRAGEN ===== */

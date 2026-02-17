@@ -446,6 +446,45 @@ a:hover {
     font-size: 0.9rem;
 }
 
+.werkwijze-details {
+    margin-top: 12px;
+}
+
+.werkwijze-details summary {
+    cursor: pointer;
+    color: var(--kleur-primair);
+    font-weight: 500;
+    font-size: 0.9rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.werkwijze-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.werkwijze-details summary::before {
+    content: '\25B6';
+    font-size: 0.7rem;
+    transition: transform 0.2s ease;
+}
+
+.werkwijze-details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.werkwijze-details summary:hover {
+    color: var(--kleur-primair-donker);
+}
+
+.werkwijze-details p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--kleur-tekst-licht);
+}
+
 .werkwijze-toelichting {
     margin-top: 32px;
     color: var(--kleur-tekst-licht);

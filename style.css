@@ -625,7 +625,7 @@ a:hover {
     width: 200px;
     height: auto;
     object-fit: cover;
-    object-position: center;
+    object-position: center 30%;
     border-radius: var(--radius);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     flex-shrink: 0;

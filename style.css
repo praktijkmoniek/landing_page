@@ -441,19 +441,6 @@ a:hover {
     font-size: 0.95rem;
 }
 
-.meer-link {
-    display: inline-block;
-    margin-top: 12px;
-    color: var(--kleur-primair-donker);
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-}
-
-.meer-link:hover {
-    color: var(--kleur-primair);
-}
-
 .werkwijze-extra {
     margin-top: 12px;
     font-size: 0.9rem;
@@ -496,83 +483,6 @@ a:hover {
     margin-top: 10px;
     font-size: 0.9rem;
     color: var(--kleur-tekst-licht);
-}
-
-/* Over Moniek uitklap */
-.over-moniek-details {
-    margin-top: 12px;
-}
-
-.over-moniek-details summary {
-    cursor: pointer;
-    color: var(--kleur-primair);
-    font-weight: 500;
-    font-size: 0.95rem;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.over-moniek-details summary::-webkit-details-marker {
-    display: none;
-}
-
-.over-moniek-details summary::before {
-    content: '\25B6';
-    font-size: 0.7rem;
-    transition: transform 0.2s ease;
-}
-
-.over-moniek-details[open] summary::before {
-    transform: rotate(90deg);
-}
-
-.over-moniek-details summary:hover {
-    color: var(--kleur-primair-donker);
-}
-
-.over-moniek-details p {
-    margin-top: 12px;
-    line-height: 1.8;
-}
-
-/* Referenties uitklap */
-.referenties-details {
-    margin-top: 16px;
-}
-
-.referenties-details summary {
-    cursor: pointer;
-    color: var(--kleur-primair);
-    font-weight: 500;
-    font-size: 0.95rem;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.referenties-details summary::-webkit-details-marker {
-    display: none;
-}
-
-.referenties-details summary::before {
-    content: '\25B6';
-    font-size: 0.7rem;
-    transition: transform 0.2s ease;
-}
-
-.referenties-details[open] summary::before {
-    transform: rotate(90deg);
-}
-
-.referenties-details summary:hover {
-    color: var(--kleur-primair-donker);
-}
-
-.referenties-details .referenties-grid {
-    margin-top: 16px;
 }
 
 .werkwijze-toelichting {

@@ -429,6 +429,17 @@
         </div>
     </section>
 
+    <!-- Voorleesknop -->
+    <div class="voorlees-knop" id="voorleesKnop" title="Pagina voorlezen">
+        <svg class="voorlees-icoon" id="voorleesIcoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+        </svg>
+        <svg class="voorlees-icoon" id="stopIcoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+            <path d="M6 6h12v12H6z"/>
+        </svg>
+        <span class="voorlees-label" id="voorleesLabel">Voorlezen</span>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -458,6 +469,65 @@
                 navLinks.classList.remove('open');
             });
         });
+
+        // Voorleesfunctie
+        const voorleesKnop = document.getElementById('voorleesKnop');
+        const voorleesIcoon = document.getElementById('voorleesIcoon');
+        const stopIcoon = document.getElementById('stopIcoon');
+        const voorleesLabel = document.getElementById('voorleesLabel');
+        let bezig = false;
+
+        function haalTekstOp() {
+            const secties = document.querySelectorAll('h1, h2, h3, p, li, blockquote p, .stap-title, .stap-tekst');
+            const uitgesloten = document.querySelectorAll('.nav-links, .footer, .hero-stappenplan');
+            return Array.from(secties)
+                .filter(el => {
+                    for (const u of uitgesloten) if (u.contains(el)) return false;
+                    return el.offsetParent !== null && el.innerText.trim().length > 0;
+                })
+                .map(el => el.innerText.trim())
+                .join('. ');
+        }
+
+        function startVoorlezen() {
+            window.speechSynthesis.cancel();
+            const tekst = haalTekstOp();
+            const uiting = new SpeechSynthesisUtterance(tekst);
+            uiting.lang = 'nl-NL';
+            uiting.rate = 0.95;
+            uiting.pitch = 1;
+
+            // Kies Nederlandse stem indien beschikbaar
+            const stemmen = window.speechSynthesis.getVoices();
+            const nlStem = stemmen.find(s => s.lang.startsWith('nl'));
+            if (nlStem) uiting.voice = nlStem;
+
+            uiting.onend = () => zetUit();
+            uiting.onerror = () => zetUit();
+
+            window.speechSynthesis.speak(uiting);
+            bezig = true;
+            voorleesIcoon.style.display = 'none';
+            stopIcoon.style.display = 'block';
+            voorleesLabel.textContent = 'Stop';
+            voorleesKnop.classList.add('actief');
+        }
+
+        function zetUit() {
+            window.speechSynthesis.cancel();
+            bezig = false;
+            voorleesIcoon.style.display = 'block';
+            stopIcoon.style.display = 'none';
+            voorleesLabel.textContent = 'Voorlezen';
+            voorleesKnop.classList.remove('actief');
+        }
+
+        voorleesKnop.addEventListener('click', () => {
+            if (bezig) { zetUit(); } else { startVoorlezen(); }
+        });
+
+        // Stemmen laden (sommige browsers laden dit async)
+        window.speechSynthesis.onvoiceschanged = () => {};
 
         // Navbar achtergrond bij scrollen
         window.addEventListener('scroll', () => {

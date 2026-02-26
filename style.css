@@ -350,6 +350,12 @@ a:hover {
     text-decoration: underline;
 }
 
+.stap-zonnetje {
+    width: 1.2em;
+    height: 1.2em;
+    color: var(--kleur-paars);
+}
+
 /* ===== KERNWAARDEN ===== */
 .kernwaarden {
     padding: 60px 0;

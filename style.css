@@ -93,6 +93,16 @@ a:hover {
     font-weight: 700;
     color: var(--kleur-paars);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-bus {
+    flex-shrink: 0;
+    display: block;
+    height: 52px;
+    width: auto;
 }
 
 .nav-links {

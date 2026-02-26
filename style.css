@@ -208,6 +208,148 @@ a:hover {
     text-decoration: none;
 }
 
+/* ===== HERO SPLIT ===== */
+.hero-content-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    text-align: left;
+}
+
+.hero-tekst .hero-subtitle,
+.hero-tekst h1,
+.hero-tekst .hero-text {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero-stappenplan {
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+    padding: 24px 24px 20px;
+    box-shadow: 0 4px 24px rgba(78, 65, 135, 0.08);
+    backdrop-filter: blur(4px);
+}
+
+.hero-stap-titel {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--kleur-primair);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.hero-timeline::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--kleur-primair) 8%, var(--kleur-primair) 92%, transparent);
+    opacity: 0.2;
+}
+
+.hero-stap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 0;
+    position: relative;
+}
+
+.hero-stap-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--kleur-licht);
+    border: 1px solid rgba(46, 191, 165, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    transition: var(--overgang);
+}
+
+.hero-stap-accent .hero-stap-icon {
+    background: var(--kleur-primair);
+    border-color: var(--kleur-primair);
+}
+
+.hero-stap:hover .hero-stap-icon {
+    background: var(--kleur-primair);
+    border-color: var(--kleur-primair);
+    transform: scale(1.1);
+}
+
+.hero-stap-body {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-stap-nr {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--kleur-primair);
+    letter-spacing: 0.05em;
+}
+
+.hero-stap-naam {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--kleur-tekst);
+    line-height: 1.3;
+}
+
+.hero-stap-meer {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--kleur-primair-donker);
+    text-decoration: none;
+}
+
+.hero-stap-meer:hover {
+    color: var(--kleur-primair);
+    text-decoration: none;
+}
+
+.hero-stap-link {
+    color: var(--kleur-tekst);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero-stap-link:hover {
+    color: var(--kleur-primair);
+    text-decoration: underline;
+}
+
+.stap-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.stap-title-link:hover {
+    color: var(--kleur-primair);
+    text-decoration: underline;
+}
+
 /* ===== KERNWAARDEN ===== */
 .kernwaarden {
     padding: 60px 0;
@@ -806,6 +948,116 @@ a:hover {
     opacity: 0.6;
 }
 
+/* ===== STAPPENPLAN ===== */
+.stappenplan-timeline {
+    position: relative;
+    max-width: 700px;
+}
+
+.stappenplan-timeline::before {
+    content: '';
+    position: absolute;
+    left: 34px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--kleur-primair) 5%, var(--kleur-primair) 95%, transparent);
+    opacity: 0.25;
+}
+
+.stap {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 44px;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: stapFadeUp 0.55s ease forwards;
+}
+
+.stap:nth-child(1) { animation-delay: 0.05s; }
+.stap:nth-child(2) { animation-delay: 0.15s; }
+.stap:nth-child(3) { animation-delay: 0.25s; }
+.stap:nth-child(4) { animation-delay: 0.35s; }
+.stap:nth-child(5) { animation-delay: 0.45s; }
+.stap:nth-child(6) { animation-delay: 0.55s; }
+.stap:nth-child(7) { animation-delay: 0.65s; }
+
+@keyframes stapFadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stap-icon-wrap {
+    flex-shrink: 0;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: var(--kleur-licht);
+    border: 1.5px solid rgba(46, 191, 165, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+    transition: var(--overgang);
+}
+
+.stap:hover .stap-icon-wrap {
+    background: var(--kleur-primair);
+    border-color: var(--kleur-primair);
+    transform: scale(1.06);
+}
+
+.stap-highlight .stap-icon-wrap {
+    background: var(--kleur-primair);
+    border-color: var(--kleur-primair);
+}
+
+.stap-content {
+    padding-top: 8px;
+    flex: 1;
+}
+
+.stap-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--kleur-primair);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.stap-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--kleur-paars);
+    margin-bottom: 6px;
+    line-height: 1.25;
+}
+
+.stap-tekst {
+    font-size: 0.92rem;
+    color: var(--kleur-tekst-licht);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.stap-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.stap-tag {
+    background: var(--kleur-licht);
+    border: 1px solid rgba(46, 191, 165, 0.3);
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 0.75rem;
+    color: var(--kleur-tekst-licht);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
     .waarden-grid,
@@ -848,6 +1100,20 @@ a:hover {
     .foto-staand {
         width: 100%;
         height: 300px;
+    }
+
+    .hero-content-split {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        text-align: center;
+    }
+
+    .hero-tekst .hero-subtitle,
+    .hero-tekst h1,
+    .hero-tekst .hero-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero h1 {

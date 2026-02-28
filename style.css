@@ -1094,6 +1094,10 @@ a:hover {
     margin-bottom: 0;
 }
 
+.stap-tekst + .stap-tekst {
+    margin-top: 0.75rem;
+}
+
 .stap-tags {
     display: flex;
     flex-wrap: wrap;

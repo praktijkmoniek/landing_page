@@ -526,6 +526,8 @@ a:hover {
 .skj-badge-hero {
     margin-top: 8px;
     margin-bottom: 16px;
+    background: transparent;
+    box-shadow: none;
 }
 
 .skj-badge-hero span {

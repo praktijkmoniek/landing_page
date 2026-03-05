@@ -531,7 +531,11 @@ a:hover {
 }
 
 .skj-badge-hero span {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
+}
+
+.skj-badge-hero .skj-logo {
+    height: 28px;
 }
 
 .skj-logo {

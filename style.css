@@ -523,6 +523,10 @@ a:hover {
     box-shadow: none;
 }
 
+.skj-badge-contact {
+    margin: 24px auto 0;
+}
+
 .skj-logo {
     height: 40px;
     width: auto;

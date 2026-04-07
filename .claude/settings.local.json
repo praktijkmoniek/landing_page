@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Praktijk Moniek website\n\nSimpele one-page website met secties voor Over Moniek, Hulpvragen,\nWerkwijze, Rijdende Praktijk, Scholen en Contact.\nKleuren: #4E4187, #F8FFE5, #2EBFA5. Lettertype: Josefin Sans.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(gh auth:*)",
+      "Bash(sips:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "WebFetch(domain:www.skjeugd.nl)",
+      "Bash(git revert:*)",
+      "Bash(git checkout:*)",
+      "WebFetch(domain:www.designrush.com)",
+      "Bash(convert:*)",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3.7:*)",
+      "Bash(pip3.7 install:*)",
+      "Bash(brew install:*)",
+      "Bash(sudo chown:*)",
+      "Bash(pip3:*)",
+      "Bash(/usr/local/bin/python3.7 -m pip install:*)",
+      "Bash(/usr/local/bin/python3.7:*)"
+    ]
+  }
+}

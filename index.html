@@ -41,13 +41,19 @@
                 <h1>Kinderen helpen stralen <svg class="zonnetje" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="1" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="20" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></h1>
                 <p class="hero-text">In mijn Praktijk Moniek help ik kinderen en jongeren bij het leren, ontwikkelen, opbouwen van veerkracht en versterken van zelfvertrouwen. Samen zoeken we naar de beste ondersteuning die bij jou(w kind) past.</p>
                 <a href="#contact" class="btn">Neem contact op</a>
-                <div class="skj-badge skj-badge-hero">
-                    <img src="skj-logo.png" alt="SKJ Geregistreerd" class="skj-logo">
-                    <span>SKJ-geregistreerd orthopedagoog</span>
-                </div>
-                <div class="skj-badge skj-badge-hero">
-                    <img src="nvo-logo.png" alt="NVO Lid" class="skj-logo">
-                    <span>Lid van de NVO - Nederlandse Vereniging van Pedagogen en Onderwijskundigen</span>
+                <div class="hero-badges">
+                    <div class="skj-badge skj-badge-hero">
+                        <img src="skj-logo.png" alt="SKJ Geregistreerd" class="skj-logo">
+                        <span>SKJ-geregistreerd orthopedagoog</span>
+                    </div>
+                    <div class="skj-badge skj-badge-hero">
+                        <img src="nvo-logo.png" alt="NVO Lid" class="skj-logo">
+                        <span>Lid van de NVO - Nederlandse Vereniging van Pedagogen en Onderwijskundigen</span>
+                    </div>
+                    <div class="skj-badge skj-badge-hero">
+                        <img src="vog-logo.png" alt="VOG" class="skj-logo">
+                        <span>Beschikt over een geldige Verklaring Omtrent het Gedrag</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-stappenplan">
@@ -329,8 +335,8 @@
 
     <!-- Rijdende Praktijk -->
     <section id="rijdende-praktijk" class="sectie sectie-accent">
-        <div class="container twee-kolommen">
-            <div class="kolom-tekst kolom-tekst-licht">
+        <div class="container rijdende-grid">
+            <div class="kolom-tekst kolom-tekst-licht rijdende-tekst">
                 <h2>Rijdende praktijk</h2>
                 <p>Zelf woon ik in Nijmegen, maar met mijn ingerichte Mercedes camperbus komt Praktijk Moniek letterlijk naar jullie toe!<br><br>Begeleiding op locatie, in een omgeving die vertrouwd en laagdrempelig voelt.</p>
                 <ul>
@@ -344,14 +350,13 @@
                 </ul>
                 <p class="quote">Samen kinderen in hun kracht zetten &mdash;<br>op locatie, waar het nodig is.</p>
             </div>
-            <div class="kolom-afbeelding">
-                <div class="foto-grid-links">
-                    <img src="bus.jpg" alt="Rijdende Praktijk van Praktijk Moniek" class="sectie-foto">
-                    <img src="bus-interieur.jpg" alt="Interieur van de rijdende praktijk" class="sectie-foto foto-klein">
-                    <img src="kaartjes.jpg" alt="Spelmateriaal tijdens een sessie" class="sectie-foto foto-klein">
-                </div>
-                <img src="bus-buiten.jpg" alt="De camperbus van Praktijk Moniek" class="sectie-foto" style="margin-top: 16px; width: 100%; border-radius: var(--radius); height: 300px; object-fit: cover; object-position: center;">
+            <div class="rijdende-hoofdfoto">
+                <img src="bus.jpg" alt="Rijdende Praktijk van Praktijk Moniek" class="sectie-foto rijdende-foto">
             </div>
+            <img src="bus-overzicht.jpg" alt="Interieur van de rijdende praktijk" class="sectie-foto rijdende-foto">
+            <img src="kaartjes.jpg" alt="Spelmateriaal tijdens een sessie" class="sectie-foto rijdende-foto">
+            <img src="bus-buiten.jpg" alt="De camperbus van Praktijk Moniek" class="sectie-foto rijdende-foto rijdende-foto-laag">
+            <img src="bus-boeken.jpg" alt="Boekenplank in de rijdende praktijk" class="sectie-foto rijdende-foto rijdende-foto-laag" style="object-position: center 30%;">
         </div>
     </section>
 
@@ -461,7 +466,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-<p class="footer-logo">Praktijk Moniek</p>
+            <p class="footer-logo">Praktijk Moniek <span class="footer-kvk">kvk-nummer 42109348</span></p>
             <p class="footer-tagline">Orthopedagogiek voor Jeugd &amp; Gezin</p>
             <p class="footer-tagline footer-tagline-klein">Nijmegen, maar ook hierbuiten inzetbaar</p>
             <p class="footer-copy footer-links"><a href="Algemene voorwaarden Praktijk Moniek.pdf" target="_blank" rel="noopener">Algemene voorwaarden</a><span class="footer-scheiding">|</span><a href="Privacyverklaring Praktijk Moniek.pdf" target="_blank" rel="noopener">Privacyverklaring</a><span class="footer-scheiding">|</span><a href="https://www.nvo.nl/kwaliteit/beroepscode-en-tuchtrecht/tuchtrecht" target="_blank" rel="noopener">Klachtenportaal</a></p>

@@ -523,9 +523,17 @@ a:hover {
     box-shadow: none;
 }
 
+.hero-badges {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 16px;
+    text-align: left;
+}
+
 .skj-badge-hero {
-    margin-top: 8px;
-    margin-bottom: 16px;
+    margin: 0;
     background: transparent;
     box-shadow: none;
 }
@@ -534,8 +542,12 @@ a:hover {
     font-size: 0.55rem;
 }
 
+/* vaste breedte zodat de teksten recht onder elkaar beginnen */
 .skj-badge-hero .skj-logo {
     height: 34px;
+    width: 64px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .skj-logo {
@@ -885,6 +897,36 @@ a:hover {
     min-height: 0;
 }
 
+/* Rijdende praktijk: tekst + hoofdfoto boven, vier foto's eronder */
+.rijdende-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.rijdende-tekst {
+    grid-column: 1 / 3;
+    padding-right: 32px;
+}
+
+/* hoofdfoto vult de hoogte van de tekst */
+.rijdende-hoofdfoto {
+    grid-column: 3 / 5;
+    position: relative;
+    min-height: 350px;
+}
+
+.rijdende-hoofdfoto .rijdende-foto {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+}
+
+.rijdende-foto {
+    height: 280px;
+    object-position: center;
+}
+
 .foto-staand {
     width: 200px;
     height: auto;
@@ -952,6 +994,11 @@ a:hover {
     font-weight: 700;
     color: var(--kleur-primair);
     margin-bottom: 4px;
+}
+
+.footer-kvk {
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .footer-tagline {
@@ -1174,6 +1221,35 @@ a:hover {
 
     .twee-kolommen {
         grid-template-columns: 1fr;
+    }
+
+    .rijdende-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rijdende-tekst {
+        grid-column: auto;
+        padding-right: 0;
+        margin-bottom: 32px;
+    }
+
+    .rijdende-hoofdfoto {
+        grid-column: auto;
+        min-height: 0;
+    }
+
+    .rijdende-hoofdfoto .rijdende-foto {
+        position: static;
+    }
+
+    .rijdende-foto,
+    .rijdende-hoofdfoto .rijdende-foto {
+        height: auto;
+        display: block;
+    }
+
+    .rijdende-foto-laag {
+        height: 300px;
     }
 
     .werkwijze-voordelen ul {

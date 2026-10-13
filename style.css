@@ -897,21 +897,21 @@ a:hover {
     min-height: 0;
 }
 
-/* Rijdende praktijk: tekst + hoofdfoto boven, foto's eronder (3 per rij) */
+/* Rijdende praktijk: tekst + hoofdfoto boven, foto's eronder (4 per rij) */
 .rijdende-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
 .rijdende-tekst {
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
     padding-right: 32px;
 }
 
 /* hoofdfoto vult de hoogte van de tekst */
 .rijdende-hoofdfoto {
-    grid-column: 4 / 7;
+    grid-column: 3 / 5;
     position: relative;
     min-height: 350px;
 }
@@ -923,7 +923,6 @@ a:hover {
 }
 
 .rijdende-foto {
-    grid-column: span 2;
     height: 300px;
     object-position: center;
 }

@@ -983,7 +983,8 @@ a:hover {
 
 .contact-foto {
     display: block;
-    width: 180px;
+    width: 240px;
+    max-width: 80%;
     height: auto;
     margin: 8px 0;
     border-radius: var(--radius);
